@@ -13,8 +13,13 @@ describe("WordCounter", function(){
     });
 
   it("instantiates with blank arrays for the text and word count", function(){
-    expect(wordCounter.fullTextAsArray).toEqual([])
     expect(wordCounter.wordArray).toEqual([])
+  });
+
+  it("can convert a string to converts a text file into an array of javaScript objects", function(){
+    wordCounter.textToArray("mock text file text to test if converted to array")
+    var expectedOutcome = ["mock", "text", "file", "text", "to", "test", "if", "converted", "to", "array"]
+    expect(wordCounter.wordArray).toEqual(expectedOutcome)
   });
 
 });
