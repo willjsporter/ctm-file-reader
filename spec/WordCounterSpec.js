@@ -17,8 +17,8 @@ describe("WordCounter", function(){
   });
 
   it("can convert a string to converts a text file into an array of javaScript objects", function(){
-    wordCounter.textToArray("mock text file text to test if converted to array")
-    var expectedOutcome = ["mock", "text", "file", "text", "to", "test", "if", "converted", "to", "array"]
+    wordCounter.textToArray("mock text file test")
+    var expectedOutcome = [{word:"mock", count: 1}, {word:"text", count: 1}, {word:"file", count: 1}, {word:"test", count: 1}]
     expect(wordCounter.wordArray).toEqual(expectedOutcome)
   });
 

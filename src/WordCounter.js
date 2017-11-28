@@ -7,7 +7,18 @@ function WordCounter() {
 };
 
 WordCounter.prototype.textToArray = function (inputString) {
-  this.wordArray = inputString.split(" ")
+  self = this
+  var textAsArray = inputString.split(" ")
+  textAsArray.forEach(function(arrayWord){
+    var count = 0
+    for (var i = 0; i < textAsArray.length; i++){
+      if(textAsArray[i] === arrayWord) {
+        count++
+      }
+    }
+    var entry = {word: arrayWord, count: count}
+    self.wordArray.push(entry)
+  })
 }
 
 
