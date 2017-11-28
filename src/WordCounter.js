@@ -29,7 +29,4 @@ Array.prototype._countAndRemoveWord = function (array) {
   return {word: currentWord, count: counter};
 }
 
-
-// filepath of text can be found using the following method: `path.join(__dirname, '..', 'Railway-Children.txt')`
-
 module.exports = WordCounter;
