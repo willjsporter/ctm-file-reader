@@ -6,11 +6,11 @@ function WordCounter() {
   this.wordArray = new Array()
 };
 
-WordCounter.prototype.textToArray = function (inputString) {
+WordCounter.prototype.wordCountText = function (inputArray) {
   self = this
-  var textAsArray = inputString.split(" ")
-  while (textAsArray.length !== 0){
-    var entry = textAsArray._countAndRemoveWord(textAsArray)
+  // var textAsArray = inputString.split(" ")
+  while (inputArray.length !== 0){
+    var entry = inputArray._countAndRemoveWord(inputArray)
     self.wordArray.push(entry)
   }
 }
