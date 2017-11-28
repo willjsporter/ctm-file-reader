@@ -10,15 +10,14 @@ describe("Reader", function(){
   var mockText;
   var mockReadText;
 
-  beforeEach(function(done){
+  beforeEach(function(){
     mockText = 'This is the mock text to be read, in the Reader instance; this is in order to give test input data.'
     mockReadText = 'this is the mock text to be read in the reader instance this is in order to give test input data'
     mock({
       'mock/file/path': mockText
     });
-    reader = new Reader();
-    reader.read('mock/file/path');
-    done();
+    reader = new Reader()
+    reader._read('mock/file/path');
     });
 
   afterEach(mock.restore);
@@ -28,8 +27,14 @@ describe("Reader", function(){
   });
 
   it("reads the file and returns a string", function(){
+    // reader._read('mock/file/path');
     reader._formatter();
     expect(reader.text).toEqual(mockReadText);
+  });
+
+  it("reads the file and returns a string", function(){
+    reader.formattedRead('mock/file/path')
+    expect(reader.text).toEqual(mockReadText)
   });
 
 });
