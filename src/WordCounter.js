@@ -10,19 +10,23 @@ WordCounter.prototype.textToArray = function (inputString) {
   self = this
   var textAsArray = inputString.split(" ")
   while (textAsArray.length !== 0){
-    var count = 0
-    var arrayIndex = 0
-    var currentWord = textAsArray[0]
-    while(arrayIndex < textAsArray.length){
-      if(currentWord === textAsArray[arrayIndex]) {
-        count++
-        textAsArray.splice(arrayIndex,1)
-        }
-      else{arrayIndex++}
-    }
-    var entry = {word: currentWord, count: count}
+    var entry = textAsArray._countAndRemoveWord(textAsArray)
     self.wordArray.push(entry)
   }
+}
+
+Array.prototype._countAndRemoveWord = function (array) {
+  var counter = 0
+  var arrayIndex = 0
+  var currentWord = array[0]
+  while(arrayIndex < array.length){
+    if(currentWord === array[arrayIndex]) {
+      counter++
+      array.splice(arrayIndex,1)
+      }
+    else{arrayIndex++}
+  }
+  return {word: currentWord, count: counter};
 }
 
 
