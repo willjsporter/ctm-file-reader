@@ -12,7 +12,11 @@ describe("Reader", function(){
 
   beforeEach(function(){
     mockText = 'This is the mock text to be read, in the Reader instance; this is in order to give test input data.'
-    mockReadText = 'this is the mock text to be read in the reader instance this is in order to give test input data'
+    mockReadText = [
+      'this', 'is', 'the', 'mock', 'text', 'to', 'be', 'read', 'in', 'the', 'reader',
+      'instance', 'this', 'is', 'in', 'order', 'to', 'give', 'test', 'input', 'data'
+  ]
+
     mock({
       'mock/file/path': mockText
     });

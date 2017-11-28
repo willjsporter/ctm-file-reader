@@ -3,6 +3,7 @@ const path = require('path');
 
 function Reader() {
   this.text = ""
+  // this.textArray = new Array()
 };
 
 Reader.prototype._read = function (filepath) {
@@ -10,7 +11,7 @@ Reader.prototype._read = function (filepath) {
 };
 
 Reader.prototype._formatter = function (){
-  this.text = this.text.toLowerCase().replace(/[^\w\s]/g,"")
+  this.text = this.text.toLowerCase().replace(/[^\w\s]/g,"").split(/\s/)
 }
 
 Reader.prototype.formattedRead = function(filepath) {
