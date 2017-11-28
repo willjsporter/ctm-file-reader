@@ -10,10 +10,25 @@ const primeLister = require('../src/Primer.js').primeLister
 describe("Primer", function(){
 
   var primer;
+  var mockWordCounter;
 
   beforeEach(function(){
-    primer = new Primer()
+    mockWordCounter = [
+      {word: "mock", count: 17}, {word: "text", count: 11},
+      {word: "file", count: 12}, {word: "test", count: 1}
+    ]
+    primer = new Primer(mockWordCounter)
     });
+
+  it("#primeWordCountIdentifier adds whether a number in an object is prime to each word", function(){
+    var expectedOutput = [
+      {word: "mock", count: 17, isPrime: true}, {word: "text", count: 11, isPrime: true},
+      {word: "file", count: 12, isPrime: false}, {word: "test", count: 1, isPrime: false}
+    ]
+    primer.primeWordCountIdentifier()
+    expect(primer.wordCountList).toEqual(expectedOutput)
+  });
+
 
 });
 

@@ -1,8 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+const WordCounter = require('./WordCounter.js')
 
-function Primer() {
+function Primer(words) {
+  this.wordCountList = words;
+};
 
+Primer.prototype.primeWordCountIdentifier = function () {
+  var primeCandidates = this.wordCountList.maxFinder()
+  var primeList = primeCandidates.primeLister()
+  this.wordCountList.forEach(function(wordObject){
+    if(primeList.includes(wordObject.count)){
+      wordObject.isPrime = true
+    }
+    else { wordObject.isPrime = false }
+  })
 };
 
 Array.prototype.maxFinder = function () {
