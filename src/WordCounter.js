@@ -9,16 +9,20 @@ function WordCounter() {
 WordCounter.prototype.textToArray = function (inputString) {
   self = this
   var textAsArray = inputString.split(" ")
-  textAsArray.forEach(function(arrayWord){
+  while (textAsArray.length !== 0){
     var count = 0
-    for (var i = 0; i < textAsArray.length; i++){
-      if(textAsArray[i] === arrayWord) {
+    var arrayIndex = 0
+    var currentWord = textAsArray[0]
+    while(arrayIndex < textAsArray.length){
+      if(currentWord === textAsArray[arrayIndex]) {
         count++
-      }
+        textAsArray.splice(arrayIndex,1)
+        }
+      else{arrayIndex++}
     }
-    var entry = {word: arrayWord, count: count}
+    var entry = {word: currentWord, count: count}
     self.wordArray.push(entry)
-  })
+  }
 }
 
 

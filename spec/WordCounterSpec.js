@@ -22,4 +22,10 @@ describe("WordCounter", function(){
     expect(wordCounter.wordArray).toEqual(expectedOutcome)
   });
 
+  it("removes remaining instances of word from text to avoid repetitions", function(){
+    wordCounter.textToArray("test mock text file test")
+    var expectedOutcome = [{word:"test", count: 2}, {word:"mock", count: 1}, {word:"text", count: 1}, {word:"file", count: 1}]
+    expect(wordCounter.wordArray).toEqual(expectedOutcome)
+  });
+
 });
