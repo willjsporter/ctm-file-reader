@@ -9,10 +9,10 @@ Array.prototype.maxFinder = function () {
   var self = this
   var maxElement
   if (self.length > 0){
-    maxElement = self[0]
+    maxElement = self[0].count
     self.forEach(function(element) {
-      if(element > maxElement) {
-        maxElement = element
+      if(element.count > maxElement) {
+        maxElement = element.count
       }
     })
   }

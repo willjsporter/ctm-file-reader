@@ -15,12 +15,20 @@ describe("Primer", function(){
     primer = new Primer()
     });
 
-  it("has a method returns nothing for the trivial case", function(){
+});
+
+describe("Primer Helper methods", function(){
+
+  it("#maxFinder returns nothing for the trivial case", function(){
     expect([].maxFinder()).toEqual(undefined)
   });
 
-  it("has a method that finds the maximum count of a list of elements", function(){
-    expect([1,2,3,4,3].maxFinder()).toEqual(4)
+  it("#maxFinder finds the maximum count of a list of elements", function(){
+    var testArray = [
+      {someOtherThing: "not selected", count: 1}, {count: 2},
+      {count: 3}, {count: 4}, {count: 3}
+    ]
+    expect(testArray.maxFinder()).toEqual(4)
   });
 
   it("#listToHighestN creates an array of integers from 2 up to a given number", function(){
@@ -34,8 +42,6 @@ describe("Primer", function(){
     var expectedOutput = [2, 3, 5, 7, 11, 13, 17]
     expect(testNumber.primeLister()).toEqual(expectedOutput)
   });
-
-
 
 
 });

@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
     "mock-fs": "^4.4.2"
   },
   "scripts": {
