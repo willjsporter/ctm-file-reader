@@ -18,11 +18,10 @@ Primer.prototype.primeWordCountIdentifier = function () {
 };
 
 Array.prototype.maxFinder = function () {
-  var self = this
   var maxElement
-  if (self.length > 0){
-    maxElement = self[0].count
-    self.forEach(function(element) {
+  if (this.length > 0){
+    maxElement = this[0].count
+    this.forEach(function(element) {
       if(element.count > maxElement) {
         maxElement = element.count
       }
@@ -32,10 +31,9 @@ Array.prototype.maxFinder = function () {
 };
 
 Number.prototype.listToHighestN = function () {
-  var self = this
   primeCandidates = new Array
-  if(self >= 2){
-    for(var i = 2; i <= self; i++){
+  if(this >= 2){
+    for(var i = 2; i <= this; i++){
       primeCandidates.push(i)
     }
   }

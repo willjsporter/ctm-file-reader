@@ -8,10 +8,9 @@ function WordCounter() {
 
 WordCounter.prototype.wordCountText = function (inputArray) {
   self = this
-  // var textAsArray = inputString.split(" ")
   while (inputArray.length !== 0){
     var entry = inputArray._countAndRemoveWord(inputArray)
-    self.wordArray.push(entry)
+    this.wordArray.push(entry)
   }
 }
 
