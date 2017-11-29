@@ -11,7 +11,7 @@ describe("Feature test)", function() {
   var wordCounter
   var primer
   var expectedOutput
-  var testFilePath = path.join(__dirname, '..', 'testFile.txt')
+  var testFilePath = path.join(__dirname, 'helpers/testFile.txt')
 
   beforeEach(function() {
     reader = new Reader()

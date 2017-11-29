@@ -11,8 +11,8 @@ describe("Reader", function() {
   var mockReadText;
 
   beforeEach(function() {
-    mockText = 'This is the mock text to be read, in the Reader instance;
-    this is in order to give test input data.'
+    mockText = 'This is the mock text to be read, in the Reader ' +
+    'instance; this is in order to give test input data.'
     mockReadText = [
       'this', 'is', 'the', 'mock', 'text', 'to', 'be', 'read',
       'in', 'the', 'reader', 'instance', 'this', 'is', 'in',
