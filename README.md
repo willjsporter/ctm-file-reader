@@ -1,4 +1,4 @@
-# CTM - How authors use words
+# CTM - Word Frequency
 
 ## The brief
 
@@ -37,7 +37,9 @@ To run the code, from inside the `ctm-file-reader` directory run
 
 `$ npm Controller.js`
 
-which will then prompt you for a filename. Type in the filepath relative to the root directory: for example, there is a file with the text of The Railway Children in the root directory; as such we would type the file's location relative to the root of this project - `RailwayChildren.txt` - into the terminal. After hitting return, the program will run for the file you have chosen (as long as it is a valid filepath).
+which will then prompt you for a filename. Type in the filepath relative to the root directory. For example, there is a test file with some sample text in `spec/helpers`; as such we would type the file's location relative to the root of this project - `spec/helpers/testFile.txt` - into the terminal. After hitting return, the program will run for the file you have chosen (as long as it is a valid filepath).
+
+For a more complete text, you could have typed `RailwayChildren.txt` as the text of the Railway Children by E. Nesbit is saved in this document in the root directory.
 
 An example is given below:
 
