@@ -5,11 +5,11 @@ function Reader() {
   this.text = ""
 };
 
-Reader.prototype._read = function (filepath) {
+Reader.prototype._read = function(filepath) {
   this.text = fs.readFileSync(filepath, 'utf8')
 };
 
-Reader.prototype._formatter = function (){
+Reader.prototype._formatter = function() {
   this.text = this.text.toLowerCase().replace(/[^\w\s]/g,"").split(/\s/g)
   for(var i = 0; i < this.text.length; i++){
     if(this.text[i] === ""){
@@ -22,7 +22,5 @@ Reader.prototype.formattedRead = function(filepath) {
   this._read(filepath)
   this._formatter()
 }
-
-// filepath of text can be found using the following method: `path.join(__dirname, '..', 'Railway-Children.txt')`
 
 module.exports = Reader;

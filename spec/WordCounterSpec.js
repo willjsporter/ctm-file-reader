@@ -4,27 +4,35 @@ const path = require("path");
 
 WordCounter = require('../src/WordCounter');
 
-describe("WordCounter", function(){
+describe("WordCounter", function() {
 
   var wordCounter;
 
-  beforeEach(function(){
+  beforeEach(function() {
     wordCounter = new WordCounter()
-    });
+  });
 
-  it("instantiates with blank arrays for the text and word count", function(){
+  it("instantiates with blank arrays for the text and word count", function() {
     expect(wordCounter.wordArray).toEqual([])
   });
 
-  it("can convert a string to converts a text file into an array of javaScript objects", function(){
+  it("converts an array file into an array of javaScript objects",
+  function() {
     wordCounter.wordCountText(["mock", "text", "file", "test"])
-    var expectedOutcome = [{word:"mock", count: 1}, {word:"text", count: 1}, {word:"file", count: 1}, {word:"test", count: 1}]
+    var expectedOutcome = [
+      {word:"mock", count: 1}, {word:"text", count: 1},
+      {word:"file", count: 1}, {word:"test", count: 1}
+    ]
     expect(wordCounter.wordArray).toEqual(expectedOutcome)
   });
 
-  it("removes remaining instances of word from text to avoid repetitions", function(){
+  it("removes remaining instances of word from text to avoid repetitions",
+  function() {
     wordCounter.wordCountText(["test", "mock", "text", "file", "test"])
-    var expectedOutcome = [{word:"test", count: 2}, {word:"mock", count: 1}, {word:"text", count: 1}, {word:"file", count: 1}]
+    var expectedOutcome = [
+      {word:"test", count: 2}, {word:"mock", count: 1},
+      {word:"text", count: 1}, {word:"file", count: 1}
+    ]
     expect(wordCounter.wordArray).toEqual(expectedOutcome)
   });
 

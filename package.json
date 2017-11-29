@@ -8,6 +8,10 @@
     "karma": "^1.7.1",
     "mock-fs": "^4.4.2"
   },
+  "dependencies": {
+    "path": "^0.12.7",
+    "prompt": "^1.0.0"
+  },
   "scripts": {
     "test": "jasmine"
   },
