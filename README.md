@@ -41,7 +41,9 @@ which will then prompt you for a filename. Type in the filepath relative to the 
 
 An example is given below:
 
-<INSERT SCREENSHOT>
+![alt text](https://github.com/willjsporter/ctm-file-reader/blob/master/images/testFile_Output.png "Example File output")
+
+
 
 ## Running the tests
 
@@ -51,7 +53,7 @@ To run the testing suite (through Jasmine), simply type
 
 into the command line. In the final instance of the program, there are 13 tests, all of which pass. 11 are unit tests while there are two feature tests to ensure integration of the different modules.
 
-<INSERT SCREENSHOT>
+![alt text](https://github.com/willjsporter/ctm-file-reader/blob/master/images/tests_passing.png "13 tests, all passing")
 
 ## My Approach
 
