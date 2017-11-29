@@ -67,6 +67,7 @@ For the first step, I identified the following issues as key:
 4. Removing all instances of a word when counted;
 5. Returning the number of each word and the word.
 
+![alt text](https://github.com/willjsporter/ctm-file-reader/blob/master/images/reader_diagram.png "File reader diagram")
 
 For the 5th step, I initially planned to have this as a single object with all words as keys and the number of instances of each word as the values, however it became clear during the exercise that it would be better having a series of uniform objects, each with a `word` and `count` key with the relevant values stored in each.
 
@@ -82,6 +83,8 @@ For the second part of the exercise, I researched online the most efficient ways
   - `e % n === 0`
 4. Once we have iterated through the array, all remaining elements are primer
 5. We only need to iterate through elements up to and including the square root of `N` since for any non-prime `m`, any factor pair `(a,b)` such that `a * b = m` either `a` or `b` is less than or equal to the square root of `m`.
+
+![alt text](https://github.com/willjsporter/ctm-file-reader/blob/master/images/prime_diagram.png "Prime calculation diagram")
 
 Working through the first set of problems, it became clear the shape that the program would take, for both instances. Although I had carefully planned and diagrammed at the outset, I was happy to change approach when faced with evidence or new ideas that pointed to a new approach being an improvement on or more practical than my original idea.
 
